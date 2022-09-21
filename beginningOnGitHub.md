@@ -1,5 +1,3 @@
-
-
 # Initier un projet.
 
 ----
@@ -220,5 +218,3 @@ Activer l'authentification SSH dans un repo existant:
 ```bash
 git remote set-url origin git@github.com:<user name>/<repo name or gist id>.git
 ```
-
-
