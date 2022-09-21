@@ -1,4 +1,4 @@
-## À quoi sert Netcat ?
+## What is Netcat?
 
 **Netcat** or **nc**, is a well-known network analysis tool, also known as the Swiss army knife of hackers, because it has many features, similar to the described knife.
 
