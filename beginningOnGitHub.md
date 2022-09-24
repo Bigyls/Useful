@@ -1,207 +1,241 @@
-# Initier un projet.
+# Init your project on GitHub
 
-----
-
-### Vous n'avez encore rien fait dans votre projet.
+### You haven't done anything yet in your project
 
 ```bash
-git init mon_projet
+git init my_project
 ```
 
-Cela va créér un répertoire "mon_projet" dans le dossier courant.
+This will create a "my_project" directory in the current folder.
 
-### Vous avec déjà débuté votre projet.
+---
 
-Votre répertoire "mon_projet" existe donc déjà, et il contient déjà des fichiers. Placez vous dans votre répertoire et exécutez la commande suivante:
+### You have already started your project
+
+Your "my_project" directory therefore already exists, and it already contains files. Go to your directory and run the following command :
 
 ```bash
 git init
 ```
 
-### Ajoutez des fichiers à votre git.
+---
 
-Votre répertoire contient des fichiers, il faut les ajouter à git pour qu'il puisse tenir compte de ces fichiers.
+### Add files to your git
+
+Your directory contains files, you must add them to git so that it can take these files into account :
 
 ```bash
 git add my_file
 ```
 
-Ou si plusieurs fichiers:
+Or if multiple files :
 
 ```bash
 git add my_file1 my_file2
 ```
 
-Ou pour ajouter tous les fichiers du répertoire:
+Or to add all files in the directory :
 
 ```bash
 git add .
 ```
 
-### Afficher le statut de votre git.
+---
+
+### Show the status of your git
 
 ```bash
 git status
 ```
 
-Vous obtiendrez ainsi la liste des fichiers non encore ajoutés à votre git, et la liste des fichiers déjà ajoutés, mais n'ayant pas encore été mis a jour dans votre git depuis leur dernière modification.
+This will give you the list of files not yet added to your git, and the list of files already added, but not yet updated in your git since their last modification.
 
-### Faire un commit (prise d'une photo/snapshot).
+---
 
-Vous avez modifié un fichier (par exemple my_file1), il faut alors faire un commit pour que git enregistre ces modifications:
+### Make a commit (like photo/snapshot).
 
-```bash
-git commit my_file1 -m "ajout de la fonction md2html"
-```
-
-L'argument -m permet d'ajouter un bref commentaire décrivant votre modification. Ce commentaire est obligatoire; si vous n'ajoutez pas l'argument -m et son commentaire, l'éditeur nano s'ouvrira alors pour que vous puissiez ajouter votre commentaire.
-
-Il est aussi possible de commit tout le projet 
+You have modified a file (for example my_file1), then you must make a commit for git to save these modifications :
 
 ```bash
-git commit -m "ajout de la fonction md2html"
+git commit my_file1 -m "add function md2html"
 ```
 
-### Obtenir une liste de tous vos commit et de leurs commentaires.
+The -m argument allows you to add a brief comment describing your change. This comment is mandatory; if you don't add the -m argument and its comment, then the nano editor will open for you to add your comment.
+
+
+It is also possible to commit the whole project
+
+```bash
+git commit -m "add function md2html"
+```
+
+---
+
+### Get a list of all your commits and their comments
 
 ```bash
 git log
 ```
 
-Pour chaque commit, la première ligne correspond au sha du commit.
+For each commit, the first line corresponds to the sha of the commit.
 
-### Revenir à un ancien commit.
+---
 
-Il faut faire un `git log` pour connaitre son sha.
+### Revert to an old commit
+
+You have to do a `git log` to know your sha and after :
 
 ```bash
-git checkout sha_du _vieux_commit
+git checkout sha_of_old_commit
 ```
 
-Pour revenir au dernier commit (le plus récent):
+To revert to the last (most recent) commit :
 
 ```bash
 git checkout master
 ```
 
-### Créér une branche.
+---
 
-Vous voulez faire une modification sur l'un de vos fichiers tout en conservant votre dernier commit intacte; il faut pour cela créér une branche.
+### Create a branch
+
+If you want to make a change to one of your files while keeping your last commit intact; you need to create a branch for this :
 
 ```bash
-git branch nom_de_la_branche
+git branch name_of_the_branch
 ```
 
-Pour savoir dans quelle branche vous vous situez:
+To find out which branch you are in :
 
 ```bash
 git branch
 ```
 
-Vous verrez alors vos differentes branches: la branche master (c'est la branche principale), et votre nouvelle branche. L'astérix devant master signifie que vous êtes toujours dans la branche master. Il faut alors changer de branche avant de faire vos modifications:
+You will then see your different branches: the master branch (this is the main branch), and your new branch. The asterix in front of master means that you are still in the master branch. It is then necessary to change branch before making your modifications :
 
 ```bash
-git checkout nom_de_la_branche
+git checkout name_of_the_branch
 ```
 
-Pour créér une branche en se plaçant directement dans celle ci:
+To create a branch by placing yourself directly in this one :
 
 ```bash
-git checkout -b nom_de_la_branche
+git checkout -b name_of_the_branch
 ```
 
-### Merger une branche avec le master.
+---
 
-Les modifications apportées dans la branche vous conviennent. Il faut alors fusionner votre branche et votre master. Placer vous dans la branche master:
+### Merge a branch with the master
+
+The changes made in the branch are fine with you. You must then merge your branch and your master. Go to the master branch :
 
 ```bash
 git checkout master
 ```
 
-Puis :
+Then :
 
 ```bash
-git merge nom_de_la_branche
+git merge name_of_the_branch
 ```
 
-Pour effacer la branche devenue inutile:
+To delete the branch that is no longer needed :
 
 ```bash
-git branch -D nom_de_la_branche
+git branch -D name_of_the_branch
 ```
 
-### Cloner un repository ou un gist
+---
+
+### Clone a repository or a gist
 
 ```bash
-git clone path_du_repository_ou_du_gist path_du_repertoire_a_creer_en_local
+git clone path_of_repository_or_gist path_of_local_directory_to_create
 ```
 
-### Push vers github
+---
 
-Relier votre git local à votre repository github (à faire une seule fois):
+### Push to github
 
-Créer un repository sur votre compte github, puis placez vous dans votre dossier local contenant votre git et votre projet local. Puis entrez la commande suivante:
+Link your local git to your github repository (to be done once) :
+
+
+Create a repository on your github account, then go to your local folder containing your git and your local project. Then enter the following command :
 
 ```bash
-git remote add origin https://github.com/nomutilisateur/MonProjet.git
+git remote add origin https://github.com/username/MyProjet.git
 ```
 
-Faire un push (pensez à faire un commit avant !)
+Make a push (remember to make a commit before !) :
 
 ```bash
 git push
 ```
 
-Ou:
+Or :
 
 ```bash
 git push --set-upstream origin master
 ```
 
-Il faudra alors entrez votre nom d’utilisateur et mot de passe sauf si vous avez installé un certificat ssh
+Or if you have errors :
 
-Sinon, il vous faudra installer gh et le lancer avec les commandes suivante:
+```bash
+git pull --rebase origin main
+git push origin main
+```
+
+---
+
+### Push to gist
+
+- Create a gist from your github account.
+- Clone your local gist
+- Place your file in your local git
+
+Then do a commit and then a git push :
+
+```bash
+git push git@gist.github.com:<your gist id e4.....>.git
+```
+
+---
+
+### Pull from github to your local repo
+
+To pull the latest changes from your remote repository (on github) to your local repository :
+Put yourself in your local repository :
+
+```bash
+git pull origin master
+```
+
+---
+
+### Connect your Shell with GitHub
+
+You will then have to enter your username and password unless you have installed an ssh certificate.
+Otherwise, you will need to install gh and launch it with the following commands:
 
 ```bash
 sudo apt install gh
 gh auth login
 ```
 
-Il faudra alors selctionner les options GitHub.com => HTTPS => Yes => Paste ann authentication token (token créer dans Settings => Developer settings => Personnal acces tokens => Generate token (avec tous les droits et pas d'expiration))
+t will then be necessary to select the options GitHub.com => HTTPS => Yes => Paste ann authentication token (token created in Settings => Developer settings => Personal access tokens => Generate token (with all rights and no expiration) ).
+Thus, you can perform any actions without entering identifiers.
 
-Ainsi, vous pouvez faire n'importe quelles actions sans rentrer d'identifiants.
+---
 
-### Push vers gist
+### Enable SSH Authentication
 
-- Créer un gist depuis votre compte github.
-- Clonez votre gist en local
-- Placer votre fichier dans votre git local
-
-Faire ensuite un commit puis un git push:
-
-```bash
-git push git@gist.github.com:<votre gist id e4.....>.git
-```
-
-### Pull de github vers votre repo local
-
-Pour récupérer les dernières modifications de votre repository distant (sur github) vers votre repository local:
-
-Placez vous dans votre repository local
-
-```bash
-git pull origin master
-```
-
-### Activer l'authentification par SSH
-
-Créer une paire de clés SSH:
+Create an SSH key pair :
 
 ```bash
 ssh-keygen -t ed25519 -C "<email>@<email>"
 ```
 
-Récupérer votre clé public:
+Retrieve your public key :
 
 ```bash
 ls ~/.ssh
@@ -211,9 +245,8 @@ cat ~/.ssh/id_rsa.pub
 ssh-rsa AAAAB3Nza.....
 ```
 
-Ajouter votre clé public en vous connectant sur github et en allant dans les menus 'settings' puis 'SSH and GPG keys'
-
-Activer l'authentification SSH dans un repo existant:
+Add your public key by connecting to github and going to the 'settings' menu then 'SSH and GPG keys'
+Enable SSH authentication in an existing repo :
 
 ```bash
 git remote set-url origin git@github.com:<user name>/<repo name or gist id>.git
