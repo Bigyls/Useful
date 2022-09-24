@@ -1,12 +1,10 @@
 ## What is Nmap?
 
----
+
 
 Nmap ("Network Mapper") is a free and open source utility for network discovery and security auditing. Many systems and network administrators also find it useful for tasks such as network inventory, managing service upgrade schedules, and monitoring host or service uptime. Nmap uses raw IP packets in novel ways to determine what hosts are available on the network, what services (application name and version) those hosts are offering, what operating systems (and OS versions) they are running. It was designed to rapidly scan large networks, but works fine against single hosts.
 
 ## How to Use Nmap
-
----
 
 Nmap can be used in a variety of ways depending on the user's level of technical expertise.
 
@@ -23,8 +21,6 @@ nmap [ <Scan Type> ...] [ <Options> ] { <target specification> }
 ```
 
 ## Basic Scanning Techniques
-
----
 
 The `-s` switch determines the type of scan to perform.
 
@@ -324,8 +320,6 @@ Not specifying a `T` value will default to `-T3`, or normal speed.
 
 ## Firewall Evasion Techniques
 
----
-
 ### Firewall/IDS Evasion and Spoofing
 
 | Nmap Switch | Description |
@@ -386,8 +380,6 @@ nmap --badsum [target]
 ```
 
 ## Advanced Scanning Functions
-
----
 
 ### TCP SYN Scan
 
@@ -455,9 +447,7 @@ nmap --send-eth [target]
 nmap --send-ip [target]
 ```
 
-## Timing Options
-
----
+## Timing Option
 
 ### Timing Templates
 
@@ -595,8 +585,6 @@ nmap -oS [scan.txt] [target]
 
 ## Compare Scans
 
----
-
 ### Comparison Using Ndiff
 
 ```shell
@@ -616,8 +604,6 @@ ndiff --xml [scan1.xml] [scan2.xml]
 ```
 
 ## Troubleshooting and Debugging
-
----
 
 ### Get Help
 
@@ -674,8 +660,6 @@ nmap -e [interface] [target]
 ```
 
 ## Nmap Scripting Engine
-
----
 
 ### Execute Individual Scripts
 
