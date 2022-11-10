@@ -147,6 +147,21 @@ git branch -D name_of_the_branch
 
 ---
 
+### Merge a remote branch into your local branch
+
+When you select the Squash and merge option on a pull request on GitHub.com, the pull request's commits are squashed into a single commit. **Instead of seeing all of a contributor's individual commits from a topic branch, the commits are combined into one commit and merged into the default branch**.
+
+```bash
+git fetch --all (OR git fetch remote_branch_name)
+git branch -a (to see if the remote branch exists, in red if it exists remotely, in white if it exists in local, in green if it exists in local and if it is the current branch)
+git stash (stash your local changes if any)
+git checkout remote_branch_name (retrieve and switch to remote_branch_name to be your current branch)
+git checkout local_branch_name (switch to local branch)
+git merge remote_branch_name
+```
+
+---
+
 ### Clone a repository or a gist
 
 ```bash
