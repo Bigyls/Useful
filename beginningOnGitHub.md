@@ -212,6 +212,36 @@ git pull origin master
 
 ---
 
+### Rebase a branch
+
+The git rebase command **allows you to easily change a series of commits, modifying the history of your repository**. You can reorder, edit, or squash commits together. Typically, you would use git rebase to: Edit previous commit messages. Combine multiple commits into one.
+
+```bash
+git stash
+git checkout main
+git pull
+git chekcout feature
+git rebase main (OR git rebase -i main, rebase your changes in the current branch to the main branch, OR git merge main)
+git status (we always use it after conflict resolution)
+```
+
+---
+
+### Cherry pick a commit or multiple commits
+
+**You can cherry-pick a commit on one branch to create a copy of the commit with the same changes on another branch**. If you commit changes to the wrong branch or want to make the same changes to another branch, you can cherry-pick the commit to apply the changes to another branch.
+
+If we want to cherry pick a commit from another branch :
+
+```bash
+git checkout branch_name (we switch to the branch to which we want the commit to apply)
+git cherry-pick commit_id (if we want to cherry pick one commit, the commit could be from another branch)
+git cherry-pick commit_id_1 commit_id_2 (cherry pick two commits)
+git cherry-pick commit_id1 ... commit_id_n (cherry pick the commits that are between commit_id_1 and commit_id_n both included)
+```
+
+---
+
 ### Connect your Shell with GitHub
 
 You will then have to enter your username and password unless you have installed an ssh certificate.
