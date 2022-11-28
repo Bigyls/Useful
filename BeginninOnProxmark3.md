@@ -12,7 +12,7 @@
 |[Wiegand convertion](#Wiegand-manipulation)|||
 
 ---
-# Check connection
+## Check connection
 
 Check the proxmark is being picked up by your computer. Plug it in, then:
 
@@ -28,7 +28,7 @@ cdc_acm 2-1.2:1.0: ttyACM0: USB ACM device
 And a new `/dev/ttyACM0` should have appeared.
 
 ---
-# Get permissions to use /dev/ttyACM0
+## Get permissions to use /dev/ttyACM0
 
 Add current user to the proper group to get permission to use `/dev/ttyACM0`.
 
