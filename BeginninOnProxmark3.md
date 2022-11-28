@@ -12,6 +12,41 @@
 |[Wiegand convertion](#Wiegand-manipulation)|||
 
 ---
+# Check connection
+
+Check the proxmark is being picked up by your computer. Plug it in, then:
+
+```sh
+sudo dmesg | grep -i usb
+```
+It should show up as a CDC device:
+```
+usb 2-1.2: Product: PM3
+usb 2-1.2: Manufacturer: proxmark.org
+cdc_acm 2-1.2:1.0: ttyACM0: USB ACM device
+```
+And a new `/dev/ttyACM0` should have appeared.
+
+---
+# Get permissions to use /dev/ttyACM0
+
+Add current user to the proper group to get permission to use `/dev/ttyACM0`.
+
+This step can be done from the Iceman Proxmark3 repo with:
+
+```sh
+make accessrights
+```
+
+Then, you *need* to logout and login in again for your new group membership to be fully effective.
+
+To test you have the proper read & write rights, plug the Proxmark3 and execute:
+```sh
+[ -r /dev/ttyACM0 ] && [ -w /dev/ttyACM0 ] && echo ok
+```
+It must return `ok`. Otherwise this means you've got a permission problem to fix.
+
+---
 ## Generic
 
 Auto identification
