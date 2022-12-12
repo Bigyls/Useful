@@ -8,8 +8,6 @@ git init my_project
 
 This will create a "my_project" directory in the current folder.
 
----
-
 ### You have already started your project
 
 Your "my_project" directory therefore already exists, and it already contains files. Go to your directory and run the following command :
@@ -17,8 +15,6 @@ Your "my_project" directory therefore already exists, and it already contains fi
 ```bash
 git init
 ```
-
----
 
 ### Add files to your git
 
@@ -40,8 +36,6 @@ Or to add all files in the directory :
 git add .
 ```
 
----
-
 ### Show the status of your git
 
 ```bash
@@ -49,8 +43,6 @@ git status
 ```
 
 This will give you the list of files not yet added to your git, and the list of files already added, but not yet updated in your git since their last modification.
-
----
 
 ### Make a commit (like photo/snapshot).
 
@@ -69,8 +61,6 @@ It is also possible to commit the whole project
 git commit -m "add function md2html"
 ```
 
----
-
 ### Get a list of all your commits and their comments
 
 ```bash
@@ -78,8 +68,6 @@ git log
 ```
 
 For each commit, the first line corresponds to the sha of the commit.
-
----
 
 ### Revert to an old commit
 
@@ -94,8 +82,6 @@ To revert to the last (most recent) commit :
 ```bash
 git checkout master
 ```
-
----
 
 ### Create a branch
 
@@ -123,8 +109,6 @@ To create a branch by placing yourself directly in this one :
 git checkout -b name_of_the_branch
 ```
 
----
-
 ### Merge a branch with the master
 
 The changes made in the branch are fine with you. You must then merge your branch and your master. Go to the master branch :
@@ -145,8 +129,6 @@ To delete the branch that is no longer needed :
 git branch -D name_of_the_branch
 ```
 
----
-
 ### Merge a remote branch into your local branch
 
 When you select the Squash and merge option on a pull request on GitHub.com, the pull request's commits are squashed into a single commit. **Instead of seeing all of a contributor's individual commits from a topic branch, the commits are combined into one commit and merged into the default branch**.
@@ -160,15 +142,11 @@ git checkout local_branch_name (switch to local branch)
 git merge remote_branch_name
 ```
 
----
-
 ### Clone a repository or a gist
 
 ```bash
 git clone path_of_repository_or_gist path_of_local_directory_to_create
 ```
-
----
 
 ### Push to github
 
@@ -200,8 +178,6 @@ git pull --rebase origin main
 git push origin main
 ```
 
----
-
 ### Push to gist
 
 - Create a gist from your github account.
@@ -214,8 +190,6 @@ Then do a commit and then a git push :
 git push git@gist.github.com:<your gist id e4.....>.git
 ```
 
----
-
 ### Pull from github to your local repo
 
 To pull the latest changes from your remote repository (on github) to your local repository :
@@ -224,8 +198,6 @@ Put yourself in your local repository :
 ```bash
 git pull origin master
 ```
-
----
 
 ### Rebase a branch
 
@@ -240,8 +212,6 @@ git rebase main (OR git rebase -i main, rebase your changes in the current branc
 git status (we always use it after conflict resolution)
 ```
 
----
-
 ### Cherry pick a commit or multiple commits
 
 **You can cherry-pick a commit on one branch to create a copy of the commit with the same changes on another branch**. If you commit changes to the wrong branch or want to make the same changes to another branch, you can cherry-pick the commit to apply the changes to another branch.
@@ -255,8 +225,6 @@ git cherry-pick commit_id_1 commit_id_2 (cherry pick two commits)
 git cherry-pick commit_id1 ... commit_id_n (cherry pick the commits that are between commit_id_1 and commit_id_n both included)
 ```
 
----
-
 ### Connect your Shell with GitHub
 
 You will then have to enter your username and password unless you have installed an ssh certificate.
@@ -269,8 +237,6 @@ gh auth login
 
 t will then be necessary to select the options GitHub.com => HTTPS => Yes => Paste ann authentication token (token created in Settings => Developer settings => Personal access tokens => Generate token (with all rights and no expiration) ).
 Thus, you can perform any actions without entering identifiers.
-
----
 
 ### Enable SSH Authentication
 
