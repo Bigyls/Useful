@@ -1,5 +1,0 @@
--Savoir si un package est deja installé sur la machine : dpkg -s "packageName" | grep install
--pip freeze > requirements.txt
--pip install -r requirements.txt
--mettre a jour les packages snap : 1- snap-store --quit 2- sudo snap refresh
--saut de page md : <div style="page-break-after: always;"></div>
